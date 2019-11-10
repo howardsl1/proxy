@@ -7,11 +7,10 @@ public class WizardTowerProxy implements WizardTower {
 
     public WizardTowerProxy(IvoryTower tower) {
         wiz = new ArrayList<Wizard>();
-        tower = new IvoryTower();
+        this.tower = tower;
     }
 
     public void enter(Wizard wizard) {
-        IvoryTower tower = new IvoryTower();
         if (wizard.getCredits() >= 100 && wiz.size() < 4) {
                 System.out.println(wizard.toString() + " has met the criteria");
                 wiz.add(wizard);
@@ -22,7 +21,6 @@ public class WizardTowerProxy implements WizardTower {
     }
 
     public void exit(Wizard wizard) {
-        IvoryTower tower = new IvoryTower();
         boolean c = false;;
         if (wiz.size() > 0) {
             for (int i = 0; i < wiz.size(); i++) {
