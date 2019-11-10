@@ -8,8 +8,6 @@ public class WizardSchool {
         Wizard mike = new Wizard("Mike", 30);
         Wizard ron = new Wizard("Ron", 320);
         
-        Wizard p = new Wizard("P", 230);
-
         IvoryTower tower = new IvoryTower();
         WizardTowerProxy proxy = new WizardTowerProxy(tower);
         
@@ -21,8 +19,5 @@ public class WizardSchool {
         proxy.exit(mike);
         proxy.enter(ron);
         proxy.exit(dave);
-        //proxy.enter(p); 
-        //System.out.println(dave.toString());
-        //System.out.println(sam.toString()); 
     }
 }
